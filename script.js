@@ -85,10 +85,11 @@ function inputNewItem(){
     cause: inputReps.value
   }
   firstList.appendChild(createLi(newItem))
+  document.querySelectorAll('.removeItemBtn').forEach(item => item.addEventListener('click', e => deleteItem(e)))
 }
 
 function deleteItem(e){
-  e.target.remove()
+  e.target.parentNode.remove()
   console.log('e', e.target)
 }
 
