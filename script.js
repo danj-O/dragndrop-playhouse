@@ -86,6 +86,8 @@ function inputNewItem(){
   }
   firstList.appendChild(createLi(newItem))
   document.querySelectorAll('.removeItemBtn').forEach(item => item.addEventListener('click', e => deleteItem(e)))
+  inputTitle.value = ''
+  inputReps.value = ''
 }
 
 function deleteItem(e){
